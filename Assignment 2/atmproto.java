@@ -28,8 +28,36 @@ private double balance;
     //Menu
        do
        { 
+         System.out.println("\n" +
+                            "──────────────███████──███████\n" +
+                            "──────────████▓▓▓▓▓▓████░░░░░██\n" +
+                            "────────██▓▓▓▓▓▓▓▓▓▓▓▓██░░░░░░██\n" +
+                            "──────██▓▓▓▓▓▓████████████░░░░██\n" +
+                            "────██▓▓▓▓▓▓████████████████░██\n" +
+                            "────██▓▓████░░░░░░░░░░░░██████\n" +
+                            "──████████░░░░░░██░░██░░██▓▓▓▓██\n" +
+                            "──██░░████░░░░░░██░░██░░██▓▓▓▓██\n" +
+                            "██░░░░██████░░░░░░░░░░░░░░██▓▓██\n" +
+                            "██░░░░░░██░░░░██░░░░░░░░░░██▓▓██\n" +
+                            "──██░░░░░░░░░███████░░░░██████\n" +
+                            "────████░░░░░░░███████████▓▓██\n" +
+                            "──────██████░░░░░░░░░░██▓▓▓▓██\n" +
+                            "────██▓▓▓▓██████████████▓▓██\n" +
+                            "──██▓▓▓▓▓▓▓▓████░░░░░░████\n" +
+                            "████▓▓▓▓▓▓▓▓██░░░░░░░░░░██\n" +
+                            "████▓▓▓▓▓▓▓▓██░░░░░░░░░░██\n" +
+                            "██████▓▓▓▓▓▓▓▓██░░░░░░████████\n" +
+                            "──██████▓▓▓▓▓▓████████████████\n" +
+                            "────██████████████████████▓▓▓▓██\n" +
+                            "──██▓▓▓▓████████████████▓▓▓▓▓▓██\n" +
+                            "████▓▓██████████████████▓▓▓▓▓▓██\n" +
+                            "██▓▓▓▓██████████████████▓▓▓▓▓▓██\n" +
+                            "██▓▓▓▓██████████──────██▓▓▓▓████\n" +
+                            "██▓▓▓▓████──────────────██████ \n" +
+                            "──████");
+         System.out.println("\n Welcome to Mario's Gold Coin Machine");
          System.out.println("\nPlease choose from the following options");
-         System.out.println("\n1.Deposit. \n2.Withdraw \n3.Check Balance \n0.Exit");
+         System.out.println("\n1.Deposit Gold Coins. \n2.Withdraw Gold Coins \n3.Check Coin Balance \n0.Exit");
          
          selector = stanly.nextInt();
          if(selector==1)
@@ -61,13 +89,13 @@ public void deposit() throws IOException
 {
     BufferedReader buffy;
     String damount;
-    System.out.println("Enter deposit amount...");
+    System.out.println("How many gold coins do you want to deposit today ?");
     buffy = new BufferedReader(new InputStreamReader(System.in));
     damount = buffy.readLine();
     double amount = Double.valueOf(damount).doubleValue();
     balance = balance + amount;
     
-    System.out.println("Your balance is now: $" + balance);
+    System.out.println("Your balance is now: " + balance + " gold coins");
 }
 
 //Withdraw Method
@@ -81,13 +109,16 @@ public void withdraw() throws IOException
     double amount = Double.valueOf(wamount).doubleValue();
     balance = balance - amount;
     
-    System.out.println("Your balance is now: $" + balance);
+    System.out.println("Your balance is now: " + balance + " gold coins");
 }
 
 //Check Balance Method
 public void checkbalance() throws IOException
 {
-    System.out.println("Your balance is... $" +  balance); 
+    System.out.println("You have " + balance + " gold coins"); 
+    System.out.println("Wow, how are you supposed to alimony with that ?");
+    System.out.println("Go kill some more Goombas !");
+            
 }
 
 }
