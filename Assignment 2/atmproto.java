@@ -120,7 +120,7 @@ public void withdraw() throws IOException
 public void checkbalance() throws IOException
 {
     System.out.println("You have " + balance + " gold coins"); 
-    System.out.println("Wow, how are you supposed to alimony with that ?");
+    System.out.println("Wow, how are you supposed to pay alimony with that ?");
     System.out.println("Go kill some more Goombas !");
             
 }
