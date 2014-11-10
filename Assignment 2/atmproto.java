@@ -107,6 +107,10 @@ public void withdraw() throws IOException
     buffy = new BufferedReader(new InputStreamReader(System.in));
     wamount = buffy.readLine();
     double amount = Double.valueOf(wamount).doubleValue();
+    
+    if (balance  < amount)
+        System.out.println("Not enough coins in account.");
+    else
     balance = balance - amount;
     
     System.out.println("Your balance is now: " + balance + " gold coins");
